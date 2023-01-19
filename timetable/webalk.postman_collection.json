@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "4563af0d-130d-40a0-8f6b-f18a35d011e4",
+		"name": "haladojava",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21483666"
+	},
+	"item": [
+		{
+			"name": "1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/allLectures",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"allLectures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/editProfessorObject?id=1&objectID=8",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"editProfessorObject"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "objectID",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/createObject?id=8&name=Komplex tervezés",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createObject"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "8"
+						},
+						{
+							"key": "name",
+							"value": "Komplex tervezés"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/allObjects",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"allObjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/deleteLectureProfessor?professorID=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deleteLectureProfessor"
+					],
+					"query": [
+						{
+							"key": "professorID",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/createLecture?id=8&objectID=4&professorID=4&lecturehallID=3&date=2022.02.25",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createLecture"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "8"
+						},
+						{
+							"key": "objectID",
+							"value": "4"
+						},
+						{
+							"key": "professorID",
+							"value": "4"
+						},
+						{
+							"key": "lecturehallID",
+							"value": "3"
+						},
+						{
+							"key": "date",
+							"value": "2022.02.25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/editLecturehall?id=5&name=A1/216&space=25",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"editLecturehall"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						},
+						{
+							"key": "name",
+							"value": "A1/216"
+						},
+						{
+							"key": "space",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/allLecturehalls",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"allLecturehalls"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/editProfessorName?id=4&name=Dr. Krizsán Zoltán",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"editProfessorName"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						},
+						{
+							"key": "name",
+							"value": "Dr. Krizsán Zoltán"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "10",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/createProfessor?id=8&name=Tompa Tamás&objectID=8",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createProfessor"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "8"
+						},
+						{
+							"key": "name",
+							"value": "Tompa Tamás"
+						},
+						{
+							"key": "objectID",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "11",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getLecturehall?id=0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getLecturehall"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "12",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getObject?id=15",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getObject"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
