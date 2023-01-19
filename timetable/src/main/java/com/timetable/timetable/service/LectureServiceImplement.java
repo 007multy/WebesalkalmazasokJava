@@ -10,7 +10,7 @@ import java.security.InvalidParameterException;
 import java.util.List;
 
 @Service
-public class LectureServiceImplement implements GradeService{
+public class LectureServiceImplement implements LectureService{
 
     private LectureDAO LectureDAO;
 

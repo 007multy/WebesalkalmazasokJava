@@ -4,7 +4,7 @@ import com.timetable.timetable.model.Lecture;
 import java.util.List;
 
 
-public interface GradeService {
+public interface LectureService {
 	List<Lecture> listAllLectures();
 	Lecture getLecture(int id) throws NotFoundException;
 	void getLecturebyObjectID(int objectID);

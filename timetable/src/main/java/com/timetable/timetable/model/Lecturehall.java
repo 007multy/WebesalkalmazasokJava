@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 @Builder
 public class Lecturehall {
 
-	public Lecturehall(int id, String name, double space) {
+	public Lecturehall(int id, String name, int space) {
 		this.id = id;
 		this.name = name;
 		this.space = space;
@@ -35,7 +35,7 @@ public class Lecturehall {
 	}
 
 
-	public double getSpace() {
+	public int getSpace() {
 		return space;
 	}
 
@@ -52,7 +52,7 @@ public class Lecturehall {
     private String name;
     
     @NotNull(message="Mandatory field")
-    private double space;
+    private int space;
 
 	
 }

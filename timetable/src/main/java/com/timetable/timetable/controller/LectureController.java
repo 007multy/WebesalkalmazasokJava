@@ -13,16 +13,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.timetable.timetable.model.Lecture;
-import com.timetable.timetable.service.GradeService;
+import com.timetable.timetable.service.LectureService;
 import com.timetable.timetable.service.NotFoundException;
 
 @Controller
 public class LectureController {
 
-    private GradeService LectureService;
+    private LectureService LectureService;
 
     @Autowired
-    public LectureController(GradeService LectureService){
+    public LectureController(LectureService LectureService){
         this.LectureService = LectureService;
     }
 
