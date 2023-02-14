@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "4563af0d-130d-40a0-8f6b-f18a35d011e4",
-		"name": "haladojava",
+		"_postman_id": "8de8a1c4-6c05-4852-ae60-9bdc40e5d71b",
+		"name": "Webalk",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "21483666"
 	},
@@ -12,13 +12,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/allLectures",
+					"raw": "localhost:8080/allSubjects",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"allLectures"
+						"allSubjects"
 					]
 				}
 			},
@@ -27,25 +27,21 @@
 		{
 			"name": "2",
 			"request": {
-				"method": "PUT",
+				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/editProfessorObject?id=1&objectID=8",
+					"raw": "localhost:8080/getSubject?id=5",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"editProfessorObject"
+						"getSubject"
 					],
 					"query": [
 						{
 							"key": "id",
-							"value": "1"
-						},
-						{
-							"key": "objectID",
-							"value": "8"
+							"value": "5"
 						}
 					]
 				}
@@ -55,26 +51,16 @@
 		{
 			"name": "3",
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/createObject?id=8&name=Komplex tervezés",
+					"raw": "localhost:8080/allStudents",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"createObject"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "8"
-						},
-						{
-							"key": "name",
-							"value": "Komplex tervezés"
-						}
+						"allStudents"
 					]
 				}
 			},
@@ -83,16 +69,30 @@
 		{
 			"name": "4",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/allObjects",
+					"raw": "localhost:8080/createStudent?id=1&neptuncode=BFHRGP&name=Gulyás Gábor",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"allObjects"
+						"createStudent"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "neptuncode",
+							"value": "BFHRGP"
+						},
+						{
+							"key": "name",
+							"value": "Gulyás Gábor"
+						}
 					]
 				}
 			},
@@ -101,21 +101,29 @@
 		{
 			"name": "5",
 			"request": {
-				"method": "DELETE",
+				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/deleteLectureProfessor?professorID=1",
+					"raw": "localhost:8080/createStudent?id=5&neptuncode=BFHRGP&name=Gulyás Gábor",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"deleteLectureProfessor"
+						"createStudent"
 					],
 					"query": [
 						{
-							"key": "professorID",
-							"value": "1"
+							"key": "id",
+							"value": "5"
+						},
+						{
+							"key": "neptuncode",
+							"value": "BFHRGP"
+						},
+						{
+							"key": "name",
+							"value": "Gulyás Gábor"
 						}
 					]
 				}
@@ -125,37 +133,21 @@
 		{
 			"name": "6",
 			"request": {
-				"method": "POST",
+				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/createLecture?id=8&objectID=4&professorID=4&lecturehallID=3&date=2022.02.25",
+					"raw": "localhost:8080/deleteExam?id=1",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"createLecture"
+						"deleteExam"
 					],
 					"query": [
 						{
 							"key": "id",
-							"value": "8"
-						},
-						{
-							"key": "objectID",
-							"value": "4"
-						},
-						{
-							"key": "professorID",
-							"value": "4"
-						},
-						{
-							"key": "lecturehallID",
-							"value": "3"
-						},
-						{
-							"key": "date",
-							"value": "2022.02.25"
+							"value": "1"
 						}
 					]
 				}
@@ -165,16 +157,16 @@
 		{
 			"name": "7",
 			"request": {
-				"method": "PUT",
+				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/editLecturehall?id=5&name=A1/216&space=25",
+					"raw": "localhost:8080/editExam?id=5&subjectcode=GEIAL31G&date=2023-02-&neptuncode=KLMNO&grade=Pass",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"editLecturehall"
+						"editExam"
 					],
 					"query": [
 						{
@@ -182,12 +174,20 @@
 							"value": "5"
 						},
 						{
-							"key": "name",
-							"value": "A1/216"
+							"key": "subjectcode",
+							"value": "GEIAL31G"
 						},
 						{
-							"key": "space",
-							"value": "25"
+							"key": "date",
+							"value": "2023-02-"
+						},
+						{
+							"key": "neptuncode",
+							"value": "KLMNO"
+						},
+						{
+							"key": "grade",
+							"value": "Pass"
 						}
 					]
 				}
@@ -200,13 +200,19 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/allLecturehalls",
+					"raw": "localhost:8080/getExambyDate?date=2023-01-31",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"allLecturehalls"
+						"getExambyDate"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2023-01-31"
+						}
 					]
 				}
 			},
@@ -215,25 +221,21 @@
 		{
 			"name": "9",
 			"request": {
-				"method": "PUT",
+				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/editProfessorName?id=4&name=Dr. Krizsán Zoltán",
+					"raw": "localhost:8080/getExambyStudent?neptuncode=KLMNOS",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"editProfessorName"
+						"getExambyStudent"
 					],
 					"query": [
 						{
-							"key": "id",
-							"value": "4"
-						},
-						{
-							"key": "name",
-							"value": "Dr. Krizsán Zoltán"
+							"key": "neptuncode",
+							"value": "KLMNOS"
 						}
 					]
 				}
@@ -241,80 +243,18 @@
 			"response": []
 		},
 		{
-			"name": "10",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"url": {
-					"raw": "localhost:8080/createProfessor?id=8&name=Tompa Tamás&objectID=8",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"createProfessor"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "8"
-						},
-						{
-							"key": "name",
-							"value": "Tompa Tamás"
-						},
-						{
-							"key": "objectID",
-							"value": "8"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "11",
+			"name": "localhost:8080/allExams",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/getLecturehall?id=0",
+					"raw": "localhost:8080/allExams",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"getLecturehall"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "0"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "12",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8080/getObject?id=15",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"getObject"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "15"
-						}
+						"allExams"
 					]
 				}
 			},
